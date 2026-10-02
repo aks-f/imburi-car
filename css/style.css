@@ -1,0 +1,7 @@
+:root {
+    --bs-primary-rgb:  127, 133, 143;
+}
+
+.bg-dark {
+    background-color: black;
+}
