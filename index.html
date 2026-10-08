@@ -1,132 +1,538 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imburi Car</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
-  <div class="bg-dark text-white text-center py-1 small">
-    <div class="container">
-      <span>Fiado só quando o mundo acabar</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imburi Car</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="text-dark">
+    <div class="bg-dark text-white text-center py-2 small">
+      Fiado só quando o mundo acabar
     </div>
-  </div>
+    <nav class="navbar navbar-expand-lg bg-laranja border-bottom sticky-top">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Imburi Car</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar"
+          aria-controls="navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="#" class="nav-link active" aria-current="page">Início</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Categorias</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item">Carros de Mão</a></li>
+                <li>
+                  <a href="#" class="dropdown-item">Carrinhos de Rolimã</a>
+                </li>
+                <li><a href="#" class="dropdown-item">Hotwheels</a></li>
+                <li><a href="#" class="dropdown-item">Movidos a Pilha</a></li>
+                <li>
+                  <a href="#" class="dropdown-item"
+                    >Carrinho de Controle Remoto</a
+                  >
+                </li>
+                <li><a href="#" class="dropdown-item">Peças</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Ofertas</a>
+            </li>
+            <li class="nav-item"></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Procurar..."
+              aria-label="Search"
+            />
+            <button class="btn text-white btn-success-hover" type="submit">
+              buscar
+            </button>
+          </form>
+          <button
+            class="btn btn-outline-dark position-relative ms-lg-2 mt-3 mt-lg-0"
+          >
+            <i class="bi bi-cart2"></i>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="#">Imburi Car</a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarContent">
-
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Categorias</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Ofertas</a></li>
-        </ul>
-
-        <form class="d-flex me-lg-3 my-2 my-lg-0 flex-grow-1 max-w-md mx-lg-3" role="search">
-          <div class="input-group">
-            <input class="form-control" type="search" placeholder="O que você procura?" aria-label="Buscar">
-            <button class="btn btn-primary" type="submit">buscar</button>
-          </div>
-        </form>
-
-
-        <div class="d-flex align-items-center gap-3 mt-2 mt-lg-0">
-          <a href="#" class="text-dark text-decoration-none small"><i class="bi bi-person fs-5 align-middle"></i> Entrar</a>
-          <a href="#" class="btn btn-outline-primary position-relative">
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              0
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary"
+            >
+              3
             </span>
-          </a>
+          </button>
         </div>
       </div>
-    </div>
-  </nav>
-
-
-  <div id="mainCarousel" class="carousel slide my-4" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
-    </div>
-    <div class="container">
-      <div class="carousel-inner rounded shadow-sm">
-        <div class="carousel-item active bg-secondary text-white text-center py-5">
-          <div class="py-5">
-            <h2 class="fw-bold">CARROS DE MÃO COM OS MELHORES PREÇOS</h2>
-            <p>Confira as melhores ofertas da Imburi Car</p>
+    </nav>
+    <div id="bannerCarrossel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#bannerCarrossel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#bannerCarrossel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#bannerCarrossel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div
+          class="carousel-item active"
+          style="
+            background-image:
+              linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.15)),
+              url(&quot;https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=85&quot;);
+          "
+        >
+          <div
+            class="h-100 d-flex align-items-center text-white px-5"
+            style="padding-left: 15% !important; padding-right: 15% !important"
+          >
+            <div>
+              <h1 class="fw-bold fs-1">IMBURI CAR</h1>
+              <p class="mb-3">Seu carro merece o melhor.</p>
+              <a href="#destaques" class="btn btn-laranja">Conferir ofertas</a>
+            </div>
           </div>
         </div>
-        <div class="carousel-item bg-dark text-white text-center py-5">
-          <div class="py-5">
-            <h2 class="fw-bold">TAXA ZERO NO FINANCIAMENTO</h2>
-            <p class="lead">Garanta sua sucata nova hoje mesmo</p>
+        <div
+          class="carousel-item"
+          style="
+            background-image:
+              linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.15)),
+              url(&quot;https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85&quot;);
+          "
+        >
+          <div
+            class="h-100 d-flex align-items-center text-white px-5"
+            style="padding-left: 15% !important; padding-right: 15% !important"
+          >
+            <div>
+              <h1 class="fw-bold fs-1">PEÇAS E ACESSÓRIOS</h1>
+              <p class="mb-3">Qualidade e segurança para o seu veículo.</p>
+              <a href="#categorias" class="btn btn-laranja"
+                >Explorar categorias</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="carousel-item"
+          style="
+            background-image:
+              linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.15)),
+              url(&quot;https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=1600&q=85&quot;);
+          "
+        >
+          <div
+            class="h-100 d-flex align-items-center text-white px-5"
+            style="padding-left: 15% !important; padding-right: 15% !important"
+          >
+            <div>
+              <h1 class="fw-bold fs-1">OFERTAS ESPECIAIS</h1>
+              <p class="mb-3">Descontos imperdíveis toda semana.</p>
+              <a href="#destaques" class="btn btn-laranja">Ver ofertas</a>
+            </div>
           </div>
         </div>
       </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#bannerCarrossel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#bannerCarrossel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide-to="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
-
-  <section class="container my-5">
-    <h3 class="mb-4 fw-bold">Categorias</h3>
-    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-6 g-3 text-center">
-      <div class="col">
-        <div class="p-3 border rounded bg-light hover-shadow">
-          <i class="text-primary"></i>
-          <p class="mb-0 mt-2 fw-semibold">Carrinhos de Mão</p>
+    <main class="container-fluid px-3 px-lg-4 py-4">
+      <section id="categorias" class="mb-5">
+        <h2 class="fw-bold fs-4 border-start border-laranja border-4 ps-2 mb-3">
+          Categorias
+        </h2>
+        <div class="row row-cols-3 row-cols-lg-6 g-2 g-lg-3">
+          <div class="col">
+            <a
+              href="#"
+              class="card text-center text-decoration-none border p-3 h-100 justify-content-center align-items-center shadow-sm"
+            >
+              <i class="bi bi-hand-thumbs-up fs-1 text-laranja mb-2"></i>
+              <span class="text-dark small fw-bold">Carros de Mão</span>
+            </a>
+          </div>
+          <div class="col">
+            <a
+              href="#"
+              class="card text-center text-decoration-none border p-3 h-100 justify-content-center align-items-center shadow-sm"
+            >
+              <i class="bi bi-car-front fs-1 text-laranja mb-2"></i>
+              <span class="text-dark small fw-bold">Carros de Rolimã</span>
+            </a>
+          </div>
+          <div class="col">
+            <a
+              href="#"
+              class="card text-center text-decoration-none border p-3 h-100 justify-content-center align-items-center shadow-sm"
+            >
+              <i class="bi bi-fire fs-1 text-laranja mb-2"></i>
+              <span class="text-dark small fw-bold">Hotwheels</span>
+            </a>
+          </div>
+          <div class="col">
+            <a
+              href="#"
+              class="card text-center text-decoration-none border p-3 h-100 justify-content-center align-items-center shadow-sm"
+            >
+              <i class="bi bi-lightning-charge fs-1 text-laranja mb-2"></i>
+              <span class="text-dark small fw-bold">A Pilha</span>
+            </a>
+          </div>
+          <div class="col">
+            <a
+              href="#"
+              class="card text-center text-decoration-none border p-3 h-100 justify-content-center align-items-center shadow-sm"
+            >
+              <i class="bi bi-controller fs-1 text-laranja mb-2"></i>
+              <span class="text-dark small fw-bold">Controle Remoto</span>
+            </a>
+          </div>
+          <div class="col">
+            <a
+              href="#"
+              class="card text-center text-decoration-none border p-3 h-100 justify-content-center align-items-center shadow-sm"
+            >
+              <i class="bi bi-tools fs-1 text-laranja mb-2"></i>
+              <span class="text-dark small fw-bold">Peças</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="destaques" class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2
+            class="fw-bold fs-4 border-start border-laranja border-4 ps-2 m-0"
+          >
+            Destaques
+          </h2>
+          <a
+            href="#destaques"
+            class="small text-decoration-none fw-bold text-dark"
+            >Ver todos</a
+          >
+        </div>
+        <div class="row row-cols-2 row-cols-lg-4 g-3">
+          <div class="col">
+            <div class="card h-100 position-relative">
+              <span class="badge bg-laranja position-absolute top-0 start-0 m-2"
+                >Promoção</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top object-fit-cover"
+                style="height: 155px"
+                alt="Ferramentas"
+              />
+              <div class="card-body d-flex flex-column p-3">
+                <h3 class="card-title fs-6 fw-bold">Kit de ferramentas</h3>
+                <p class="text-muted text-decoration-line-through small mb-0">
+                  R$ 129,90
+                </p>
+                <p class="fw-bold fs-5 text-dark mb-3">R$ 99,90</p>
+                <button class="btn btn-laranja btn-sm w-100 mt-auto">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 position-relative">
+              <span class="badge bg-laranja position-absolute top-0 start-0 m-2"
+                >Promoção</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top object-fit-cover"
+                style="height: 155px"
+                alt="Acessório"
+              />
+              <div class="card-body d-flex flex-column p-3">
+                <h3 class="card-title fs-6 fw-bold">Acessório esportivo</h3>
+                <p class="text-muted text-decoration-line-through small mb-0">
+                  R$ 89,90
+                </p>
+                <p class="fw-bold fs-5 text-dark mb-3">R$ 69,90</p>
+                <button class="btn btn-laranja btn-sm w-100 mt-auto">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 position-relative">
+              <span class="badge bg-laranja position-absolute top-0 start-0 m-2"
+                >Promoção</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top object-fit-cover"
+                style="height: 155px"
+                alt="Premium"
+              />
+              <div class="card-body d-flex flex-column p-3">
+                <h3 class="card-title fs-6 fw-bold">Acessório premium</h3>
+                <p class="text-muted text-decoration-line-through small mb-0">
+                  R$ 159,90
+                </p>
+                <p class="fw-bold fs-5 text-dark mb-3">R$ 119,90</p>
+                <button class="btn btn-laranja btn-sm w-100 mt-auto">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 position-relative">
+              <span class="badge bg-laranja position-absolute top-0 start-0 m-2"
+                >Promoção</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top object-fit-cover"
+                style="height: 155px"
+                alt="Automotivo"
+              />
+              <div class="card-body d-flex flex-column p-3">
+                <h3 class="card-title fs-6 fw-bold">Produto automotivo</h3>
+                <p class="text-muted text-decoration-line-through small mb-0">
+                  R$ 59,90
+                </p>
+                <p class="fw-bold fs-5 text-dark mb-3">R$ 39,90</p>
+                <button class="btn btn-laranja btn-sm w-100 mt-auto">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mb-4">
+        <div class="row g-3">
+          <div class="col-12 col-lg-6">
+            <div
+              class="p-4 text-white rounded bg-dark d-flex flex-column justify-content-center"
+              style="
+                background-image:
+                  linear-gradient(90deg, #171717, #17171766),
+                  url(&quot;https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=1000&q=80&quot;);
+                background-size: cover;
+                background-position: center;
+                min-height: 155px;
+              "
+            >
+              <h3 class="text-laranja fw-bold fs-4">OFERTAS IMBURI</h3>
+              <p class="mb-3">Confira nossos produtos em destaque.</p>
+              <a href="#destaques" class="btn btn-laranja align-self-start"
+                >Ver ofertas</a
+              >
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div
+              class="p-4 text-white rounded bg-dark d-flex flex-column justify-content-center"
+              style="
+                background-image:
+                  linear-gradient(90deg, #171717, #17171766),
+                  url(&quot;https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80&quot;);
+                background-size: cover;
+                background-position: center;
+                min-height: 155px;
+              "
+            >
+              <h3 class="text-laranja fw-bold fs-4">PAIXÃO POR CARROS</h3>
+              <p class="mb-3">Tudo para cuidar do seu veículo.</p>
+              <a href="#categorias" class="btn btn-laranja align-self-start"
+                >Explorar</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="bg-light py-4 border-top border-bottom">
+      <div class="container-fluid px-3 px-lg-4">
+        <div class="row row-cols-1 row-cols-lg-3 g-3">
+          <div class="col">
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-truck text-laranja fs-1"></i>
+              <div>
+                <h3 class="fw-bold fs-6 mb-1">Entrega para todo o Brasil</h3>
+                <p class="small text-muted mb-0">
+                  Receba seus produtos em casa.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-shield-lock text-laranja fs-1"></i>
+              <div>
+                <h3 class="fw-bold fs-6 mb-1">Pagamento seguro</h3>
+                <p class="small text-muted mb-0">Compre com tranquilidade.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-arrow-repeat text-laranja fs-1"></i>
+              <div>
+                <h3 class="fw-bold fs-6 mb-1">Suporte ao cliente</h3>
+                <p class="small text-muted mb-0">Conte com nossa equipe.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <div class="p-3 border rounded bg-light hover-shadow">
-          <i class="fs-1 text-primary"></i>
-          <p class="mb-0 mt-2 fw-semibold">Hotwheels</p>
+    </section>
+    <section class="text-center py-5">
+      <h2 class="fw-bold fs-5 mb-1">Receba nossas ofertas</h2>
+      <p class="small text-secondary mb-3">
+        Fique por dentro das novidades da Imburi Car.
+      </p>
+      <form
+        class="d-flex flex-column flex-sm-row justify-content-center gap-2 mx-auto px-3"
+        style="max-width: 450px"
+      >
+        <input type="email" class="form-control" placeholder="Seu e-mail" />
+        <button type="button" class="btn btn-laranja">Assinar</button>
+      </form>
+    </section>
+    <footer class="bg-dark text-white pt-4">
+      <div class="container-fluid px-3 px-lg-4">
+        <div class="row g-4 pb-4 border-bottom border-secondary">
+          <div class="col-12 col-md-6 col-lg-3">
+            <h3 class="fs-6 fw-bold text-laranja mb-3">Institucional</h3>
+            <a
+              href="#"
+              class="d-block small text-secondary text-decoration-none mb-2"
+              >Sobre a Imburi Car</a
+            >
+            <a
+              href="#"
+              class="d-block small text-secondary text-decoration-none mb-2"
+              >Contato</a
+            >
+            <a
+              href="#"
+              class="d-block small text-secondary text-decoration-none mb-2"
+              >Privacidade</a
+            >
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h3 class="fs-6 fw-bold text-laranja mb-3">Ajuda</h3>
+            <a
+              href="#"
+              class="d-block small text-secondary text-decoration-none mb-2"
+              >Dúvidas frequentes</a
+            >
+            <a
+              href="#"
+              class="d-block small text-secondary text-decoration-none mb-2"
+              >Entrega e frete</a
+            >
+            <a
+              href="#"
+              class="d-block small text-secondary text-decoration-none mb-2"
+              >Trocas e devoluções</a
+            >
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h3 class="fs-6 fw-bold text-laranja mb-3">Redes sociais</h3>
+            <a
+              href="#"
+              class="d-block small text-secondary text-decoration-none mb-2"
+              ><i class="bi bi-instagram"></i> Instagram</a
+            >
+            <a
+              href="#"
+              class="d-block small text-secondary text-decoration-none mb-2"
+              ><i class="bi bi-facebook"></i> Facebook</a
+            >
+            <a
+              href="#"
+              class="d-block small text-secondary text-decoration-none mb-2"
+              ><i class="bi bi-whatsapp"></i> WhatsApp</a
+            >
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h3 class="fs-6 fw-bold text-laranja mb-3">Formas de pagamento</h3>
+            <div class="d-flex gap-3 fs-3 text-secondary">
+              <i class="bi bi-credit-card"></i>
+              <i class="bi bi-credit-card-2-front"></i>
+              <i class="bi bi-qr-code"></i>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <div class="p-3 border rounded bg-light hover-shadow">
-          <i class="text-primary"></i>
-          <p class="mb-0 mt-2 fw-semibold">Rolimãs</p>
-        </div>
+      <div
+        class="text-center py-3 small text-secondary"
+        style="background-color: #292929"
+      >
+        © 2026 Imburi Car. Todos os direitos reservados.
       </div>
-      <div class="col">
-        <div class="p-3 border rounded bg-light hover-shadow">
-          <i class="text-primary"></i>
-          <p class="mb-0 mt-2 fw-semibold">A Duracell</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="p-3 border rounded bg-light hover-shadow">
-          <i class="text-primary"></i>
-          <p class="mb-0 mt-2 fw-semibold">Controle Remoto</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="p-3 border rounded bg-light hover-shadow">
-          <i class="text-primary"></i>
-          <p class="mb-0 mt-2 fw-semibold">Peças</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="container py-5">
-    <h3 class="mb-4 fw-bold">Destaques</h3>
-    <div class=""></div>
-  </section>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
